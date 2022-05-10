@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" href="favicon.png">    
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- aditional -->
+  <title>Axie - Render v2</title>
+  <link rel="stylesheet" href="css/style.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.1/pixi.min.js" integrity="sha384-xdEN7ies9cZm/l8HslPhg0lGG/uQuIW2KQ/EVt71QFjarfJWY95fAMqbqw/1C2rX" crossorigin="anonymous"></script>
+        <script src="pixi-spine.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script type="text/javascript" src="lib/CCapture.js"></script>
+        <script type="text/javascript" src="lib/dat.gui.js"></script>
+
+        <!-- Include WebM Writer if you want to export WebM -->
+        <script type="text/javascript" src="lib/webm-writer-0.2.0.js"></script>
+        
+        <script type="text/javascript" src="lib/gif.js"></script>
+        <script type="text/javascript" src="lib/tar.js"></script>
+        <script type="text/javascript" src="lib/download.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.13/dist/sweetalert2.all.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.13/dist/sweetalert2.css">
+</head>
+<body>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+
+			<div class="row mb-4 justify-content-center">
+				<div class="col-3 text-left">
+					<form action="" id="formulario">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id="axieID" placeholder="Axie ID" value="2595">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit" id="submit-button">Request Axie</button>
+              </div>					  
+            </div>
+          </form>
+
+
+				</div>
+				<div class="col-5 text-center">
+					
+					<div class="input-group">
+					  <span class="pt-2">Animation:&nbsp;</span><select class="custom-select" id="animationList"></select>
+					  <i class="material-icons btn" style="font-size:24px" onclick="togglePause();">pause_circle_outline</i>&nbsp;
+					</div>
+
+				</div>
+				<div class="col-4 d-flex" style="justify-content: space-between; align-items: center;">		
+            <img src="img/transparent.png" alt="" style="max-width: 40px;" onclick="reload(true);">
+            <img src="img/screen.png" alt="" style="max-width: 40px;" onclick="reload(false);">
+            <a href="#" class="btn btn-secondary" id="IDButton" onclick="downloadImage()">Render axie</a>			    			
+            <a  href="" id="btn-imagen" class="btn btn-secondary" target="_blank">Render parts</a>
+    	    			
+				</div>					
+      </div>
+
+      <div id="imageLoc" class="text-center"></div>
+
+		</div>
+	</div>
+</div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  <script src="js/functions.js"></script>
+</body>
+</html>
+

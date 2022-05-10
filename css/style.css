@@ -1,0 +1,11 @@
+body {
+	background-color: #232323;
+}
+canvas {
+	width: 100%;
+	background-color: white !important;
+}
+.btn-red {
+	background-color: #5f42e7;
+	color: white;
+}
