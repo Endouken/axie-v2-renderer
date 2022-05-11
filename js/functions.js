@@ -23,7 +23,7 @@ function init(transparency) {
     app.view.style.border = "1px solid #d9d9d9";
     //app.view.style.backgroundColor = "transparent";
 
-    document.getElementById("imageLoc").appendChild(app.view);
+    document.getElementById("imageSet").appendChild(app.view);
 
 }
   

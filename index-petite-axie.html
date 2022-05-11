@@ -32,44 +32,52 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.13/dist/sweetalert2.css">
 </head>
 <body>
-
+<div class="my-5"></div>
 
 <div class="container">
 	<div class="row">
 		<div class="col-12">
-
-			<div class="row mb-4 justify-content-center">
-				<div class="col-3 text-left">
-					<form action="" id="formulario">
+      <div class="row mb-4">
+        <div class="col-3">
+          <form action="" id="formulario">
             <div class="input-group mb-3">
               <input type="text" class="form-control" id="axieID" placeholder="Axie ID" value="2595">
               <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="submit" id="submit-button">Request Axie</button>
+                <button class="btn btn-red" type="submit" id="submit-button">Request Axie</button>
               </div>					  
             </div>
           </form>
-
-
-				</div>
-				<div class="col-5 text-center">
-					
-					<div class="input-group">
-					  <span class="pt-2">Animation:&nbsp;</span><select class="custom-select" id="animationList"></select>
-					  <i class="material-icons btn" style="font-size:24px" onclick="togglePause();">pause_circle_outline</i>&nbsp;
+        </div>
+        <div class="col-4">
+          <div class="input-group">
+					  <!-- <span class="pt-2">Animation:&nbsp;</span> --><select class="custom-select" id="animationList"></select>
+					  <i class="material-icons btn text-white" style="font-size:24px" onclick="togglePause();">pause_circle_outline</i>&nbsp;
 					</div>
+        </div>
+        <div class="col-5">
+          <div class="d-flex align-items-center" style="justify-content: space-between;">
+            <a href="index-petite-axie.html"><img src="img/3000.png" alt="" style="max-width: 40px;"></a>
+            <a href="index.html"><img src="img/transparent.png" alt="" style="max-width: 40px;"></a>
+            <a href="index-pantalla-verde-v2.html"><img src="img/screen.png" alt="" style="max-width: 40px;"></a>
+            <a href="#" class="btn btn-red" id="IDButton" onclick="downloadImage()">Render axie</a>			    			
+            <a  href="" id="btn-imagen" class="btn btn-red" target="_blank">Render parts</a>
+          </div>
+        </div>
 
-				</div>
-				<div class="col-4 d-flex" style="justify-content: space-between; align-items: center;">		
-            <img src="img/transparent.png" alt="" style="max-width: 40px;" onclick="reload(true);">
-            <img src="img/screen.png" alt="" style="max-width: 40px;" onclick="reload(false);">
-            <a href="#" class="btn btn-secondary" id="IDButton" onclick="downloadImage()">Render axie</a>			    			
-            <a  href="" id="btn-imagen" class="btn btn-secondary" target="_blank">Render parts</a>
-    	    			
-				</div>					
+
+
       </div>
-
       <div id="imageSet" class="text-center"></div>
-
+      <div class="text-white">This is my own version of <a href="https://freakitties.github.io/">https://freakitties.github.io/</a> project visit him first</div>
+      <div class="text-white">This is my ronin:ffc555fd1ea95f4e3038a25cc94099b473645ebc <b> just in case you want to buy me a coffee :D</b></div>
+      <div class="text-white mt-4">How to use it: <br> 
+        <ul class="text-white">
+          <li>type your axie ID and press enter or click in "Request Axie" button</li>
+          <li>there is 3 icons at the middle of the screen, that means pettite axie, transparent png sequence or green screen axie for OBS</li>
+          <li>in the right upside corner is a black menu, this is a render menu, select FPS and click start, and stop when you want to stop</li>
+        </ul> 
+         </div>
+      <div class="text-white mt-4">Im an amateur but ill try to improve this tool</div>
 		</div>
 	</div>
 </div>
@@ -81,7 +89,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-  <script src="js/functions.js"></script>
+  <script src="js/functions-3.js"></script>
 </body>
 </html>
 

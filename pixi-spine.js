@@ -7218,4 +7218,3 @@ var pixi_spine;
     PIXI.loaders.Loader.addPixiMiddleware(atlasParser);
     PIXI.loader.use(atlasParser());
 })(pixi_spine || (pixi_spine = {}));
-//# sourceMappingURL=pixi-spine.js.map

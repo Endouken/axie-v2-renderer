@@ -38,30 +38,16 @@ function getAxie() {
     if (oldID == axieID) return;
     console.log(axieID);
 
-    baseURL = "https://assets.axieinfinity.com/axies/";
-    atlasURL = baseURL + axieID + "/axie/axie.atlas";
-    //atlasURL = "https://storage.googleapis.com/assets.axieinfinity.com/axies/" + axieID + "/petite/petite.atlas";
+    // baseURL = "https://assets.axieinfinity.com/axies/";
+    // atlasURL = baseURL + axieID + "/axie/axie.atlas";
+    atlasURL = "https://storage.googleapis.com/assets.axieinfinity.com/axies/" + axieID + "/petite/petite.atlas";
     //imageURL =  data["figure"]["images"][imageName];
     //imageURL =  data["figure"]["axie"]["image"];
-    imageURL = baseURL + axieID + "/axie/axie.png";
-    //imageURL = "https://storage.googleapis.com/assets.axieinfinity.com/axies/" + axieID + "/petite/petite.png";
+    // imageURL = baseURL + axieID + "/axie/axie.png";
+    imageURL = "https://storage.googleapis.com/assets.axieinfinity.com/axies/" + axieID + "/petite/petite.png";
     //modelURL = data["figure"]["axie"]["spineModel"];
-    modelURL = baseURL + axieID + "/axie/axie.json";
-    //modelURL = "https://storage.googleapis.com/assets.axieinfinity.com/axies/" + axieID + "/petite/petite.json";
-
-    //atlasURL = "https://axieinfinity.com/assets/models/ab19de2b119e811ae576b581ebb8d60d.atlas"
-    //imageURL = "https://axieinfinity.com/assets/models/fe8e753a148b171a91580dc5ac45e4a1.png"
-    //modelURL = "https://axieinfinity.com/assets/models/473c8a72f4c0747b7851eba14118307b.json"
-    //imageName = "kotaro.png"
-    //no CORS headers
-
-    /*
-    //more data intensive, but fixes CORS problems (mainly in testing)
-    let breakCache = "?" + escape(new Date());
-    atlasURL +=  breakCache;
-    imageURL +=  breakCache;
-    modelURL +=  breakCache;
-    */
+    // modelURL = baseURL + axieID + "/axie/axie.json";
+    modelURL = "https://storage.googleapis.com/assets.axieinfinity.com/axies/" + axieID + "/petite/petite.json";
 
     let realImageName = imageURL.slice(imageURL.lastIndexOf("/") + 1, imageURL.length);
     PIXI.loader.reset();
@@ -159,7 +145,7 @@ function setupUI () {
   setupAnimationUI();
 }
 
-init(false);
+init(true);
 getAxie();
 
 
@@ -170,7 +156,7 @@ let options = {
     /* Recording options */
     //format: 'gif',
     //framerate: '60FPS',
-    format: 'webm-mediarecorder',
+    format: 'png',
     framerate: '30FPS',    
     start: function(){ startRecording(); },
     stop: function(){ stopRecording(); }
@@ -181,7 +167,7 @@ var gui = new dat.gui.GUI();
 let recording = gui.addFolder('Recording');
 //recording.add(options, 'format', ['gif', 'webm-mediarecorder', 'png']); //webm
 //recording.add(options, 'framerate', ['10FPS', '30FPS', '60FPS', '120FPS']);
-recording.add(options, 'format', ['webm-mediarecorder']); //webm
+recording.add(options, 'format', ['png']); //webm
 recording.add(options, 'framerate', ['30FPS', '60FPS']);
 recording.add(options, 'start');
 recording.add(options, 'stop');

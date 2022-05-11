@@ -23,7 +23,7 @@ function init(transparency) {
     app.view.style.border = "1px solid #d9d9d9";
     //app.view.style.backgroundColor = "transparent";
 
-    document.getElementById("imageLoc").appendChild(app.view);
+    document.getElementById("imageSet").appendChild(app.view);
 
 }
   
@@ -48,20 +48,6 @@ function getAxie() {
     //modelURL = data["figure"]["axie"]["spineModel"];
     modelURL = baseURL + axieID + "/axie/axie.json";
     //modelURL = "https://storage.googleapis.com/assets.axieinfinity.com/axies/" + axieID + "/petite/petite.json";
-
-    //atlasURL = "https://axieinfinity.com/assets/models/ab19de2b119e811ae576b581ebb8d60d.atlas"
-    //imageURL = "https://axieinfinity.com/assets/models/fe8e753a148b171a91580dc5ac45e4a1.png"
-    //modelURL = "https://axieinfinity.com/assets/models/473c8a72f4c0747b7851eba14118307b.json"
-    //imageName = "kotaro.png"
-    //no CORS headers
-
-    /*
-    //more data intensive, but fixes CORS problems (mainly in testing)
-    let breakCache = "?" + escape(new Date());
-    atlasURL +=  breakCache;
-    imageURL +=  breakCache;
-    modelURL +=  breakCache;
-    */
 
     let realImageName = imageURL.slice(imageURL.lastIndexOf("/") + 1, imageURL.length);
     PIXI.loader.reset();
