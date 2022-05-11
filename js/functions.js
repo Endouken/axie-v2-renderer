@@ -232,7 +232,7 @@ render()
 // });
 
 let requestAxie =  function() {
-    parseInt($("#axieID").val(2595));
+    parseInt($("#axieID").val(43));
     $('#submit-button').click()
 }
 
